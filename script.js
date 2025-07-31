@@ -1,17 +1,11 @@
 function setupListeners() {
   const form = document.getElementById("quiz-form");
 
-  // Radio groups: season, gap, styleable, trendy
-  ['season', 'gap', 'styleable', 'trendy'].forEach(name => {
+  // Radio groups: season, gap, styleable, trendy, color, pattern, quality
+  ['season', 'gap', 'styleable', 'trendy', 'color', 'pattern', 'quality'].forEach(name => {
     document.querySelectorAll(`input[name="${name}"]`).forEach(input => {
       input.addEventListener('change', updateFeedback);
     });
-  });
-
-  // Text inputs: color, pattern, quality
-  ['color', 'pattern', 'quality'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('input', updateFeedback);
   });
 
   // Form submit event - prevent refresh & update feedback
@@ -61,9 +55,9 @@ function updateFeedback() {
 
   // Get values
   const season = form.querySelector('input[name="season"]:checked')?.value || "";
-  const color = document.getElementById("color").value.trim().toLowerCase();
-  const pattern = document.getElementById("pattern").value.trim().toLowerCase();
-  const quality = document.getElementById("quality").value.trim().toLowerCase();
+  const color = form.querySelector('input[name="color"]:checked')?.value.toLowerCase() || "";
+  const pattern = form.querySelector('input[name="pattern"]:checked')?.value.toLowerCase() || "";
+  const quality = form.querySelector('input[name="quality"]:checked')?.value.toLowerCase() || "";
   const fillsGap = form.querySelector('input[name="gap"]:checked')?.value === "Yes";
   const styleable = form.querySelector('input[name="styleable"]:checked')?.value === "Yes";
   const trendy = form.querySelector('input[name="trendy"]:checked')?.value === "Yes";

@@ -108,7 +108,8 @@ function updateFeedback() {
 }
 
 // Final decision button logic (optional because we already show feedback live)
-document.getElementById("quiz-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  updateFeedback();
+document.getElementById("quiz-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // THIS stops the page from refreshing!
+
+  updateFeedback(); // Your function that does the scoring and shows results
 });

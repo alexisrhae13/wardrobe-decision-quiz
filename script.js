@@ -11,7 +11,7 @@ document.getElementById("quiz-form").addEventListener("submit", function (e) {
   const trendy = form.trendy.value === "true";
 
   if (trendy) {
-    document.getElementById("result").innerText = "🚫 No - it's a trend so be reallllly critical. Is everyone buying it because of the color? Is it the sillohette? Are you goign to make fun of the outfit choice in a photo you see three years from now?  ";
+    document.getElementById("result").innerText = "NO! it's a trend so be reallllly critical. Is everyone buying it because of the color? Is it the sillohette? Are you going to make fun of the outfit choice in a photo you see three years from now?  ";
     return;
   }
 
@@ -38,7 +38,8 @@ document.getElementById("quiz-form").addEventListener("submit", function (e) {
 
   if (palettes[season].colors.includes(color)) score++;
   if (palettes[season].patterns.includes(pattern)) score++;
-  if (quality !== "polyester") score++;
+  //all instances of polyester like poly blend will be grabbed. also case sensitive. 
+  if (!quality.toLowerCase().includes("poly")) score++;
   if (fillsGap) score++;
   if (styleable) score++;
 

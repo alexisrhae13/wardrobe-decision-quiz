@@ -12,6 +12,16 @@ h1 {
   color: #b22222;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-family: 'Courier', monospace;
+  padding: 2rem;
+  background: #fdfcf8;
+  color: #50C878;
+  max-width: 600px;
+  margin: auto;
+}
+
 label {
   display: block;
   margin-top: 1rem;

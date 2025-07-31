@@ -55,6 +55,25 @@
   </form>
 
   <div id="result"></div>
+<input id="color" placeholder="Color (e.g. cherry red)" />
+<input id="pattern" placeholder="Pattern (e.g. stripes)" />
+<input id="fabric" placeholder="Fabric (e.g. cotton)" />
+<select id="pairing">
+  <option value="yes">Pairs with 2+ outfits</option>
+  <option value="no">Doesn’t pair well</option>
+</select>
+<select id="gap">
+  <option value="yes">Fills wardrobe gap</option>
+  <option value="no">Duplicate vibe</option>
+</select>
+<select id="silhouette">
+  <option value="yes">Flatters me</option>
+  <option value="no">Wrong shape</option>
+</select>
+
+<button onclick="evaluateItem()">Check it</button>
+
+<pre id="results"></pre>
 
   <script src="script.js"></script>
 </body>

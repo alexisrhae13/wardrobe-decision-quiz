@@ -45,7 +45,7 @@ document.getElementById("quiz-form").addEventListener("submit", function (e) {
 
   const result = document.getElementById("result");
 
-  if (score >= 4) {
+  if (score >= 6) {
     result.innerText = "YES! This is a good choice i think!";
   } else {
     result.innerText = "Hmmm, this doesnt meet your matrix. Is there another reason you like this that much? Is it on SALE?!?!?!?!? tisk tisk.";

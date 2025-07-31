@@ -9,14 +9,21 @@
 <body>
   <h1>Should I Buy This??</h1>
 <form id="quiz-form">
-  <label>Season:</label>
+  <!--<label>Season:</label>
   <select name="season" id="season">
     <option value="">--Choose--</option>
     <option value="fall">Fall</option>
     <option value="winter">Winter</option>
     <option value="spring">Spring</option>
     <option value="summer">Summer</option>
-  </select>
+  </select>-->
+  <div class="question">
+    <p>Pick the season it falls under:</p>
+    <label><input type="radio" name="season" value="fall" required> Fall</label>
+    <label><input type="radio" name="season" value="winter"> Winter</label>
+    <label><input type="radio" name="season" value="spring"> Spring</label>
+    <label><input type="radio" name="season" value="summer"> Summer</label>
+  </div>
   <div id="season-feedback"></div>
 
   <label>Color:</label>
@@ -39,12 +46,17 @@
   </select>
   <div id="gap-feedback"></div>
 
-  <label>Can it be styled with 2+ pieces?</label>
+  <!--<label>Can it be styled with 2+ pieces?</label>
   <select name="styleable" id="styleable">
     <option value="">--Choose--</option>
     <option value="true">Yes</option>
     <option value="false">No</option>
-  </select>
+  </select>-->
+   <div class="question">
+    <p>Can it be styled with 2+ pieces?</p>
+    <label><input type="radio" name="styleable" value="Yes" required> Yeah! Versitile!</label>
+    <label><input type="radio" name="styleable" value="No"> Nope</label>
+  </div>
   <div id="styleable-feedback"></div>
 
   <label>Is it trendy?</label>

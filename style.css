@@ -28,9 +28,11 @@ label {
 }
 
 button {
+  font-size: 2rem;
+  font-family: 'Courier', monospace;
   margin-top: 1.5rem;
   padding: 0.5rem 1rem;
-  background: chartreuse;
+  background: #50C878;
   border: none;
   font-weight: bold;
   cursor: pointer;

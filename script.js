@@ -14,6 +14,7 @@ document.getElementById("quiz-form").addEventListener("submit", function (e) {
     document.getElementById("result").innerText = "NO! it's a trend so be reallllly critical. Is everyone buying it because of the color? Is it the sillohette? Are you going to make fun of the outfit choice in a photo you see three years from now?  ";
     return;
   }
+  
 
   const palettes = {
     fall: {
@@ -34,6 +35,10 @@ document.getElementById("quiz-form").addEventListener("submit", function (e) {
     }
   };
 
+  if (trendy) {
+    result.innerText = "🚫 Trendy trap! Leave it behind.";
+    return;
+  }
   let score = 0;
 
   if (palettes[season].colors.includes(color)) score++;

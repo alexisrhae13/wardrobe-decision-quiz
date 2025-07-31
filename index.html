@@ -8,54 +8,61 @@
 </head>
 <body>
   <h1>Should I Buy This??</h1>
-  <form id="quiz-form">
-    <label>Pick the season it falls under:
-      <select name="season" required>
-        <option value="">--Choose--</option>
-        <option value="fall">Fall</option>
-        <option value="winter">Winter</option>
-        <option value="spring">Spring</option>
-        <option value="summer">Summer</option>
-      </select>
-    </label>
+<form id="quiz-form">
+  <label>Season:</label>
+  <select name="season" id="season">
+    <option value="">--Choose--</option>
+    <option value="fall">Fall</option>
+    <option value="winter">Winter</option>
+    <option value="spring">Spring</option>
+    <option value="summer">Summer</option>
+  </select>
+  <div id="season-feedback"></div>
 
-    <label>Main color:
-      <input type="text" name="color" placeholder="e.g. Cherry Red" required />
-    </label>
+  <label>Color:</label>
+  <input type="text" name="color" id="color" />
+  <div id="color-feedback"></div>
 
-    <label>Main pattern:
-      <input type="text" name="pattern" placeholder="e.g. Tartan" required />
-    </label>
+  <label>Pattern:</label>
+  <input type="text" name="pattern" id="pattern" />
+  <div id="pattern-feedback"></div>
 
-    <label>Fabric:
-      <input type="text" name="quality" placeholder="e.g. Wool" required />
-    </label>
+  <label>Fabric Type:</label>
+  <input type="text" name="quality" id="quality" />
+  <div id="quality-feedback"></div>
 
-    <label>Does it fill a wardrobe gap? 
-      <select name="gap">
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-      </select>
-    </label>
+  <label>Does it fill a wardrobe gap?</label>
+  <select name="gap" id="gap">
+    <option value="">--Choose--</option>
+    <option value="true">Yes</option>
+    <option value="false">No</option>
+  </select>
+  <div id="gap-feedback"></div>
 
-    <label>Does it pair with 2 or more things already in my closet? 
-      <select name="styleable">
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-      </select>
-    </label>
+  <label>Can it be styled with 2+ pieces?</label>
+  <select name="styleable" id="styleable">
+    <option value="">--Choose--</option>
+    <option value="true">Yes</option>
+    <option value="false">No</option>
+  </select>
+  <div id="styleable-feedback"></div>
 
-    <label>Is it trending right now? 
-      <select name="trendy">
-        <option value="false">No</option>
-        <option value="true">Yes</option>
-      </select>
-    </label>
+  <label>Is it trendy?</label>
+  <select name="trendy" id="trendy">
+    <option value="">--Choose--</option>
+    <option value="true">Yes</option>
+    <option value="false">No</option>
+  </select>
+  <div id="trendy-feedback"></div>
 
-    <button type="submit">Check!</button>
-  </form>
+  <br />
+  <button type="submit">Final Decision</button>
+</form>
 
-  <div id="result"></div>
+<hr />
+
+<div><strong>Total Score:</strong> <span id="live-score">0</span>/5</div>
+<div id="result"></div>
 
   <script src="script.js"></script>
 </body>

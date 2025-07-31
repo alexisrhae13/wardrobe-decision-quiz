@@ -41,12 +41,12 @@ inputs.forEach((id) => {
 
 function updateFeedback() {
   resetScore(); // Start fresh
-  const season = document.getElementById("season").value.toLowerCase();
+  const season = form.querySelector('input[name="season"]:checked').value === "Yes";
   const color = document.getElementById("color").value.trim().toLowerCase();
   const pattern = document.getElementById("pattern").value.trim().toLowerCase();
   const quality = document.getElementById("quality").value.trim().toLowerCase();
   const fillsGap = document.getElementById("gap").value === "true";
-  const styleable = document.getElementById("styleable").value === "true";
+  const styleable = form.querySelector('input[name="styleable"]:checked').value === "Yes";
   const trendy = document.getElementById("trendy").value === "true";
 
   // Clear all feedback first

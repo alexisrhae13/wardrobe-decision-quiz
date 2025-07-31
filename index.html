@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wardrobe Decision Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Should I Buy this??</h1>
+  <form id="quiz-form">
+    <label>Season:
+      <select name="season" required>
+        <option value="">--Choose--</option>
+        <option value="fall">Fall</option>
+        <option value="winter">Winter</option>
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+      </select>
+    </label>
+##I like htis but i want them to be options picker. so ill put a bunch of generic options in. I also need lil images for them. 
+    <label>Main color:
+      <input type="text" name="color" placeholder="e.g. Cherry Red" required />
+    </label>
+
+    <label>Main Pattern:
+      <input type="text" name="pattern" placeholder="e.g. Tartan" required />
+    </label>
+
+    <label>Fabric:
+      <input type="text" name="quality" placeholder="e.g. Wool" required />
+    </label>
+
+    <label>Does it fill a wardrobe gap? 
+      <select name="gap">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </label>
+
+    <label>Does it pair with 2 or more things already in my closet? 
+      <select name="styleable">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </label>
+
+    <label>Is is trendign right now? 
+      <select name="trendy">
+        <option value="false">No</option>
+        <option value="true">Yes</option>
+      </select>
+    </label>
+
+    <button type="submit">Check!</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 

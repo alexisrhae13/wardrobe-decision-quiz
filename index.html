@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Should I Buy this??</h1>
+  <h1>Should I Buy This??</h1>
   <form id="quiz-form">
     <label>Pick the season it falls under:
       <select name="season" required>
@@ -18,11 +18,12 @@
         <option value="summer">Summer</option>
       </select>
     </label>
+
     <label>Main color:
       <input type="text" name="color" placeholder="e.g. Cherry Red" required />
     </label>
 
-    <label>Main Pattern:
+    <label>Main pattern:
       <input type="text" name="pattern" placeholder="e.g. Tartan" required />
     </label>
 
@@ -44,7 +45,7 @@
       </select>
     </label>
 
-    <label>Is is trending right now? 
+    <label>Is it trending right now? 
       <select name="trendy">
         <option value="false">No</option>
         <option value="true">Yes</option>
@@ -55,27 +56,7 @@
   </form>
 
   <div id="result"></div>
-<input id="color" placeholder="Color (e.g. cherry red)" />
-<input id="pattern" placeholder="Pattern (e.g. stripes)" />
-<input id="fabric" placeholder="Fabric (e.g. cotton)" />
-<select id="pairing">
-  <option value="yes">Pairs with 2+ outfits</option>
-  <option value="no">Doesn’t pair well</option>
-</select>
-<select id="gap">
-  <option value="yes">Fills wardrobe gap</option>
-  <option value="no">Duplicate vibe</option>
-</select>
-<select id="silhouette">
-  <option value="yes">Flatters me</option>
-  <option value="no">Wrong shape</option>
-</select>
-
-<button onclick="evaluateItem()">Check it</button>
-
-<pre id="results"></pre>
 
   <script src="script.js"></script>
 </body>
 </html>
-

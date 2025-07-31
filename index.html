@@ -9,14 +9,6 @@
 <body>
   <h1>Should I Buy This??</h1>
 <form id="quiz-form">
-  <!--<label>Season:</label>
-  <select name="season" id="season">
-    <option value="">--Choose--</option>
-    <option value="fall">Fall</option>
-    <option value="winter">Winter</option>
-    <option value="spring">Spring</option>
-    <option value="summer">Summer</option>
-  </select>-->
   <div class="question">
     <p>Pick the season it falls under:</p>
     <label><input type="radio" name="season" value="fall" required> Fall</label>
@@ -26,45 +18,57 @@
   </div>
   <div id="season-feedback"></div>
 
-  <label>Color:</label>
-  <input type="text" name="color" id="color" />
+  <div class="question">
+    <p>Pick a color:</p>
+    <label><input type="radio" name="color" value="cherry red" required> Cherry Red</label>
+    <label><input type="radio" name="color" value="chartreuse"> Chartreuse</label>
+    <label><input type="radio" name="color" value="bright teal"> Bright Teal</label>
+    <label><input type="radio" name="color" value="hot magenta"> Hot Magenta</label>
+    <label><input type="radio" name="color" value="linen beige"> Linen Beige</label>
+    <label><input type="radio" name="color" value="pink" required> Pink</label>
+    <label><input type="radio" name="color" value="purple"> Purple</label>
+  </div>
   <div id="color-feedback"></div>
 
-  <label>Pattern:</label>
-  <input type="text" name="pattern" id="pattern" />
+  <div class="question">
+    <p>Pick a pattern:</p>
+    <label><input type="radio" name="pattern" value="tartan" required> Tartan</label>
+    <label><input type="radio" name="pattern" value="stripes"> Stripes</label>
+    <label><input type="radio" name="pattern" value="fair isle"> Fair Isle</label>
+    <label><input type="radio" name="pattern" value="sailboat"> Sailboat</label>
+    <label><input type="radio" name="pattern" value="zebra"> Zebra</label>
+    <label><input type="radio" name="pattern" value="polka dot"> Polka Dot</label>
+  </div>
   <div id="pattern-feedback"></div>
 
-  <label>Fabric Type:</label>
-  <input type="text" name="quality" id="quality" />
+  <div class="question">
+    <p>Pick a primary fabric type:</p>
+    <label><input type="radio" name="quality" value="cotton" required> Cotton</label>
+    <label><input type="radio" name="quality" value="linen"> Linen</label>
+    <label><input type="radio" name="quality" value="wool"> Wool</label>
+    <label><input type="radio" name="quality" value="polyester"> Polyester</label>
+  </div>
   <div id="quality-feedback"></div>
 
-  <label>Does it fill a wardrobe gap?</label>
-  <select name="gap" id="gap">
-    <option value="">--Choose--</option>
-    <option value="true">Yes</option>
-    <option value="false">No</option>
-  </select>
+  <div class="question">
+    <p>Does it fill a wardrobe gap?</p>
+    <label><input type="radio" name="gap" value="Yes" required> Yeah!</label>
+    <label><input type="radio" name="gap" value="No"> Nope</label>
+  </div>
   <div id="gap-feedback"></div>
-
-  <!--<label>Can it be styled with 2+ pieces?</label>
-  <select name="styleable" id="styleable">
-    <option value="">--Choose--</option>
-    <option value="true">Yes</option>
-    <option value="false">No</option>
-  </select>-->
-   <div class="question">
+  
+  <div class="question">
     <p>Can it be styled with 2+ pieces?</p>
-    <label><input type="radio" name="styleable" value="Yes" required> Yeah! Versitile!</label>
+    <label><input type="radio" name="styleable" value="Yes" required> Yeah! Versatile!</label>
     <label><input type="radio" name="styleable" value="No"> Nope</label>
   </div>
   <div id="styleable-feedback"></div>
 
-  <label>Is it trendy?</label>
-  <select name="trendy" id="trendy">
-    <option value="">--Choose--</option>
-    <option value="true">Yes</option>
-    <option value="false">No</option>
-  </select>
+  <div class="question">
+    <p>Is it trendy?</p>
+    <label><input type="radio" name="trendy" value="Yes" required> Yeah!</label>
+    <label><input type="radio" name="trendy" value="No"> Nope</label>
+  </div>
   <div id="trendy-feedback"></div>
 
   <br />

@@ -1,21 +1,27 @@
+// Wait until the form is submitted before doing anything
 document.getElementById("quiz-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // Stop the page from refreshing when you click the button
 
+  // Grab all the answers from the form
   const form = e.target;
-  const season = form.season.value.toLowerCase();
-  const color = form.color.value.trim().toLowerCase();
+  const season = form.season.value.toLowerCase(); // like fall, spring, etc.
+  const color = form.color.value.trim().toLowerCase(); // removes spaces and makes it lowercase
   const pattern = form.pattern.value.trim().toLowerCase();
   const quality = form.quality.value.trim().toLowerCase();
-  const fillsGap = form.gap.value === "true";
+  const fillsGap = form.gap.value === "true"; // turns the answer into true/false
   const styleable = form.styleable.value === "true";
   const trendy = form.trendy.value === "true";
 
-  if (trendy) {
-    document.getElementById("result").innerText = "NO! it's a trend so be reallllly critical. Is everyone buying it because of the color? Is it the sillohette? Are you going to make fun of the outfit choice in a photo you see three years from now?  ";
-    return;
-  }
-  
+  // This is where the answer will show up!
+  const result = document.getElementById("result");
 
+  // If it's trendy, we stop right here and say NO!
+  if (trendy) {
+    result.innerText = "🚫 NO! It's trendy, so be reallllly critical. Are you gonna make fun of this in 3 years?";
+    return; // don’t check anything else if it’s trendy
+  }
+
+  // This is our color and pattern list for each season
   const palettes = {
     fall: {
       colors: ["crisp cream", "espresso brown", "charcoal gray", "navy", "chartreuse", "cherry red", "bright teal", "electric violet", "emerald green"],
@@ -35,25 +41,38 @@ document.getElementById("quiz-form").addEventListener("submit", function (e) {
     }
   };
 
-  if (trendy) {
-    result.innerText = "🚫 Trendy trap! Leave it behind.";
-    return;
-  }
+  // This keeps track of how many good things we see!
   let score = 0;
 
-  if (palettes[season].colors.includes(color)) score++;
-  if (palettes[season].patterns.includes(pattern)) score++;
-  //all instances of polyester like poly blend will be grabbed. also case sensitive. 
-  if (!quality.toLowerCase().includes("poly")) score++;
-  if (fillsGap) score++;
-  if (styleable) score++;
+  // Check if the color is in your season palette
+  if (palettes[season].colors.includes(color)) {
+    score++;
+  }
 
-  const result = document.getElementById("result");
+  // Check if the pattern is a match
+  if (palettes[season].patterns.includes(pattern)) {
+    score++;
+  }
 
-  if (score >= 6) {
-    result.innerText = "YES! This is a good choice i think!";
+  // Check if the fabric is NOT polyester (includes anything like "poly blend")
+  if (!quality.includes("poly")) {
+    score++;
+  }
+
+  // Did you say it fills a wardrobe gap?
+  if (fillsGap) {
+    score++;
+  }
+
+  // Does it pair with 2 or more things in your closet?
+  if (styleable) {
+    score++;
+  }
+
+  // Final result — tell you what to do!
+  if (score >= 5) {
+    result.innerText = "✅ YES! This is a good choice. Stylish and smart!";
   } else {
-    result.innerText = "Hmmm, this doesnt meet your matrix. Is there another reason you like this that much? Is it on SALE?!?!?!?!? tisk tisk.";
+    result.innerText = "🤔 Hmmm... this doesn’t meet your matrix. Is it on sale? Or just super fun?";
   }
 });
-

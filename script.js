@@ -107,6 +107,20 @@ function updateFeedback() {
   }
 }
 
+const form = document.getElementById("quiz-form");
+
+// Run updateFeedback anytime an input changes (for live feedback)
+const inputs = form.querySelectorAll("input, select, textarea");
+inputs.forEach(input => {
+  input.addEventListener("change", updateFeedback);
+});
+
+// Also run updateFeedback on form submit AND prevent page reload
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Stop page reload
+  updateFeedback();
+});
+
 // Final decision button logic (optional because we already show feedback live)
 document.getElementById("quiz-form").addEventListener("submit", function(event) {
   event.preventDefault(); // THIS stops the page from refreshing!

@@ -121,6 +121,7 @@ function updateFeedback() {
 
   // Final decision message
 const resultEl = document.getElementById("result");
+}
 
 function updateResult() {
   const resultEl = document.getElementById("result");

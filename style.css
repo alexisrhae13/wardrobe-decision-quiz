@@ -288,11 +288,25 @@ h2 {
   background-size: calc(20*var(--s)) calc(20*var(--s));
 }
 
-.pattern.sailboat {
+.pattern.sailboat1 {
   background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%2350C878" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L4 20 L20 20 Z"/></svg>') no-repeat center;
   background-size: 16px 16px;
   background-color: #fdfcf8;
 }
+
+.pattern.sailboat {
+  background: url("data:image/svg+xml;utf8,
+    <svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'>
+      <!-- Sail (white triangle) -->
+      <polygon points='32,8 32,40 8,40' fill='white'/>
+      
+      <!-- Hull (navy semicircle) -->
+      <path d='M12 44 A20 12 0 0 0 52 44 Z' fill='%23002f6c'/>
+    </svg>") no-repeat center;
+  background-size: 24px 24px;
+  background-color: #fdfcf8;
+}
+
 
 .pattern.houndstooth1 {
   background:

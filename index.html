@@ -10,11 +10,15 @@
   <h1>Should I Buy This??</h1>
 <form id="quiz-form">
   <div class="question">
-    <p><h2>Pick the season it falls under:</h2></p>
-    <label><input type="radio" name="season" value="fall" required> Fall</label>
-    <label><input type="radio" name="season" value="winter"> Winter</label>
-    <label><input type="radio" name="season" value="spring"> Spring</label>
-    <label><input type="radio" name="season" value="summer"> Summer</label>
+    <h2>Pick the season it falls under:</h2>
+    <input type="radio" name="season" value="fall" id="fall" required>
+    <label for="fall">Fall</label>
+    <input type="radio" name="season" value="winter" id="winter">
+    <label for="winter">Winter</label>
+    <input type="radio" name="season" value="spring" id="spring">
+    <label for="spring">Spring</label>
+    <input type="radio" name="season" value="summer" id="summer">
+    <label for="summer">Summer</label>
   </div>
   <div id="season-feedback"></div>
 

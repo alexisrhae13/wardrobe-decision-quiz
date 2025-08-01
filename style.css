@@ -37,7 +37,23 @@ h2 {
 /* Question Label Styling */
 /*******************************/
 .question {
-  margin-bottom: 0.5rem;
+  border: 2px dashed #ccc;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #fdfcf8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+/* Optional cute bow "knot" */
+.question::before {
+  content: "🎀";
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  font-size: 1.2rem;
+  background: #fdfcf8;
 }
 
 .question p {
@@ -84,7 +100,6 @@ h2 {
   border-radius: 50px;
   padding: 6px 14px;
   overflow: hidden;
-  transform: scale(1.04);
 }
 
 /* Shimmer overlay */

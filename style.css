@@ -204,11 +204,35 @@ h2 {
   background: #fdfcf8;
 }
 
-.pattern.abstract {
+.pattern.abstract1 {
   background: repeating-radial-gradient(circle at center, #50c878 0 2px, transparent 3px 6px);
 }
 
-.pattern.tartan {
+.pattern.abstract {
+  --s: 4px; /* control the size*/
+  --c1: #e5fcc2;
+  --c2: #45ada8;
+  
+  --_s:37.5% 12.5% at 62.5%;
+  --_g:34% 99%,#0000 101%;
+  --g1:radial-gradient(var(--_s) 100%,#0000 32%,var(--c1) var(--_g));
+  --g2:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c1) var(--_g));
+  --g3:radial-gradient(var(--_s) 100%,#0000 32%,var(--c2) var(--_g));
+  --g4:radial-gradient(var(--_s) 0   ,#0000 32%,var(--c2) var(--_g));
+  background:
+    var(--g1),
+    var(--g2) 0                calc(3*var(--s)),
+    var(--g3) var(--s)         calc(3*var(--s)),
+    var(--g4) var(--s)         calc(6*var(--s)),
+    var(--g1) calc(2*var(--s)) calc(6*var(--s)),
+    var(--g2) calc(2*var(--s)) calc(9*var(--s)),
+    var(--g3) calc(3*var(--s)) calc(9*var(--s)),
+    var(--g4) calc(3*var(--s)) 0,
+    repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
+  background-size: calc(4*var(--s)) calc(12*var(--s));
+}
+
+.pattern.tartan1 {
   background:
     linear-gradient(45deg, #003300 25%, transparent 25%),
     linear-gradient(-45deg, #003300 25%, transparent 25%),
@@ -218,12 +242,50 @@ h2 {
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
 }
 
+.pattern.tartan {
+  background-image:
+    repeating-linear-gradient(45deg,
+      hsla(240, 100%, 90%, 0) ,
+      hsla(240, 100%, 90%, 0) 8px,
+      hsla(240, 100%, 100%, 1) 8px,
+      hsla(240, 100%, 100%, 1) 16px),
+    repeating-linear-gradient(135deg,
+      hsla(240, 100%, 90%, 1) ,
+      hsla(240, 100%, 90%, 1) 8px,
+      hsla(240, 100%, 100%, 1) 8px,
+      hsla(240, 100%, 100%, 1) 16px);
+  margin: 0;
+  min-height: 80%;
+  min-width: 90%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
 .pattern.stripes {
   background: repeating-linear-gradient(45deg, #50c878, #50c878 5px, transparent 5px, transparent 10px);
 }
 
-.pattern.fairisle {
+.pattern.fairisle1 {
   background: repeating-linear-gradient(90deg, #7f8c8d 0 4px, #bdc3c7 4px 8px);
+}
+
+.pattern.fairisle {
+  --s: 6px; /* control the size*/
+  --c1: #7f8c8d;
+  --c2: #bdc3c7;
+  
+  --g:#0000 66%,var(--c1) 68% 98%,#0000;
+  background:
+    radial-gradient(30% 30% at 0%   30%,var(--g))
+     var(--s) calc(9*var(--s)),
+    radial-gradient(30% 30% at 100% 30%,var(--g))
+     var(--s) calc(-1*var(--s)),
+    radial-gradient(30% 30% at 30% 100%,var(--g))
+     calc(10*var(--s)) 0,
+    radial-gradient(30% 30% at 30% 0%  ,var(--g))
+     var(--c2);
+  background-size: calc(20*var(--s)) calc(20*var(--s));
 }
 
 .pattern.sailboat {
@@ -232,7 +294,7 @@ h2 {
   background-color: #fdfcf8;
 }
 
-.pattern.houndstooth {
+.pattern.houndstooth1 {
   background:
     linear-gradient(45deg, #36454f 25%, transparent 25%),
     linear-gradient(-45deg, #36454f 25%, transparent 25%);
@@ -240,9 +302,38 @@ h2 {
   background-position: 0 0, 5px 5px;
 }
 
-.pattern.cableknit {
+.pattern.houndstooth {
+  --s: 28px; /* control the size*/
+  --c1: #5b7c8d;
+  --c2: #edf6ee;
+    
+  background:
+    conic-gradient(var(--c1) 25%,#0000 0 50%,var(--c2) 0 75%,#0000 0),
+    linear-gradient(135deg,
+      var(--c1) 0 12.5%,var(--c2) 0 25%,
+      var(--c1) 0 37.5%,var(--c2) 0 62.5%,
+      var(--c1) 0 75%  ,var(--c2) 0 87.5%,
+      var(--c1) 0);
+  background-size: var(--s) var(--s);
+}
+
+.pattern.cableknit1 {
   background:
     linear-gradient(90deg, #50c878 10%, transparent 10% 30%, #50c878 30% 40%, transparent 40% 60%, #50c878 60% 70%);
+}
+
+.pattern.cableknit{
+  --s: 30px; /* control the size*/
+  --c1: #a2d07c;
+  --c2: #d5f4cd;
+  
+  --c:var(--c1) 0 25%,#0000 0;
+  --p:0 0/calc(3*var(--s)) calc(2*var(--s));
+  background:
+    conic-gradient(from -45deg at 75% 62.5%,var(--c)) var(--p),
+    conic-gradient(from 135deg at 25% 37.5%,var(--c)) var(--p),
+    repeating-conic-gradient(from 90deg,var(--c),var(--c2) 0 50%)
+     0 0/var(--s) var(--s);
 }
 
 /* Fabric swatches */

@@ -10,7 +10,7 @@
   <h1>Should I Buy This??</h1>
 <form id="quiz-form">
   <div class="question">
-    <h2>Pick the season it falls under:</h2>
+    <h2>Season</h2>
     <div id="season-feedback"></div>
     <input type="radio" name="season" value="fall" id="fall" required>
     <label for="fall">Fall🍂</label>
@@ -21,76 +21,103 @@
     <input type="radio" name="season" value="summer" id="summer">
     <label for="summer">Summer☀️</label>
   </div>
-  <div id="season-feedback"></div>
 
   <div class="question">
-    <p><h2>Pick a color:</h2></p>
-    <label><input type="radio" name="color" value="cherry red" required> Cherry Red</label>
-    <label><input type="radio" name="color" value="chartreuse"> Chartreuse</label>
-    <label><input type="radio" name="color" value="bright teal"> Bright Teal</label>
-    <label><input type="radio" name="color" value="hot magenta"> Hot Magenta</label>
-    <label><input type="radio" name="color" value="linen beige"> Linen Beige</label>
-    <label><input type="radio" name="color" value="pink"> Pink</label>
-    <label><input type="radio" name="color" value="purple"> Purple</label>
-    <label><input type="radio" name="color" value="crisp cream"> Crisp Cream</label>
-    <label><input type="radio" name="color" value="espresso brown"> Espresso Brown</label>
-    <label><input type="radio" name="color" value="charcoal gray"> Charcoal Gray</label>
-    <label><input type="radio" name="color" value="navy"> Navy</label>
-    <label><input type="radio" name="color" value="electric violet"> Electric Violet</label>
-    <label><input type="radio" name="color" value="emerald green"> Emerald Green</label>
-    <label><input type="radio" name="color" value="black"> Black</label>
-    <label><input type="radio" name="color" value="light gray"> Light Gray</label>
-    <label><input type="radio" name="color" value="cobalt"> Cobalt</label>
-    <label><input type="radio" name="color" value="turquoise"> Turquoise</label>
+    <h2>Pick a color:</h2>
+    <div id="color-feedback"></div>
+    <input type="radio" name="color" value="cherry red" id="cherry-red" required>
+    <label for="cherry-red"><span class="swatch" style="background-color:#c4002f;"></span> Cherry Red</label>
+    <input type="radio" name="color" value="chartreuse" id="chartreuse">
+    <label for="chartreuse"><span class="swatch" style="background-color:#dfff00;"></span> Chartreuse</label>
+    <input type="radio" name="color" value="bright teal" id="bright-teal">
+    <label for="bright-teal"><span class="swatch" style="background-color:#00bfa6;"></span> Bright Teal</label>
+    <input type="radio" name="color" value="hot magenta" id="hot-magenta">
+    <label for="hot-magenta"><span class="swatch" style="background-color:#ff00aa;"></span> Hot Magenta</label>
+    <input type="radio" name="color" value="linen beige" id="linen-beige">
+    <label for="linen-beige"><span class="swatch" style="background-color:#f5f5dc;"></span> Linen Beige</label>
+    <input type="radio" name="color" value="crisp cream" id="crisp-cream">
+    <label for="crisp-cream"><span class="swatch" style="background-color:#fffdd0;"></span> Crisp Cream</label>
+    <input type="radio" name="color" value="espresso brown" id="espresso-brown">
+    <label for="espresso-brown"><span class="swatch" style="background-color:#3b2f2f;"></span> Espresso Brown</label>
+    <input type="radio" name="color" value="charcoal gray" id="charcoal-gray">
+    <label for="charcoal-gray"><span class="swatch" style="background-color:#36454f;"></span> Charcoal Gray</label>
+    <input type="radio" name="color" value="navy" id="navy">
+    <label for="navy"><span class="swatch" style="background-color:#001f3f;"></span> Navy</label>
+    <input type="radio" name="color" value="electric violet" id="electric-violet">
+    <label for="electric-violet"><span class="swatch" style="background-color:#8f00ff;"></span> Electric Violet</label>
+    <input type="radio" name="color" value="emerald green" id="emerald-green">
+    <label for="emerald-green"><span class="swatch" style="background-color:#50c878;"></span> Emerald Green</label>
+    <input type="radio" name="color" value="black" id="black">
+    <label for="black"><span class="swatch" style="background-color:#000000;"></span> Black</label>
+    <input type="radio" name="color" value="light gray" id="light-gray">
+    <label for="light-gray"><span class="swatch" style="background-color:#d3d3d3;"></span> Light Gray</label>
+    <input type="radio" name="color" value="cobalt" id="cobalt">
+    <label for="cobalt"><span class="swatch" style="background-color:#0047ab;"></span> Cobalt</label>
+    <input type="radio" name="color" value="turquoise" id="turquoise">
+    <label for="turquoise"><span class="swatch" style="background-color:#40e0d0;"></span> Turquoise</label>
   </div>
-  <div id="color-feedback"></div>
-
-  <div class="question">
-    <p><h2>Pick a pattern:</h2></p>
-    <label><input type="radio" name="pattern" value="tartan" required> Tartan</label>
-    <label><input type="radio" name="pattern" value="stripes"> Stripes</label>
-    <label><input type="radio" name="pattern" value="fair isle"> Fair Isle</label>
-    <label><input type="radio" name="pattern" value="sailboat"> Sailboat</label>
-    <label><input type="radio" name="pattern" value="zebra"> Zebra</label>
-    <label><input type="radio" name="pattern" value="houndstooth"> Houdstooth</label>
-    <label><input type="radio" name="pattern" value="cable knit"> Cable Knit</label>
-    <label><input type="radio" name="pattern" value="polka dot"> Polka Dot</label>
-  </div>
-  <div id="pattern-feedback"></div>
-
-  <div class="question">
-    <p><h2>Pick a primary fabric type:</h2></p>
-    <label><input type="radio" name="quality" value="cotton" required> Cotton</label>
-    <label><input type="radio" name="quality" value="linen"> Linen</label>
-    <label><input type="radio" name="quality" value="wool"> Wool</label>
-    <label><input type="radio" name="quality" value="polyester"> Polyester</label>
-  </div>
-  <div id="quality-feedback"></div>
-
-  <div class="question">
-    <p><h2>Does it fill a wardrobe gap?</h2></p>
-    <label><input type="radio" name="gap" value="Yes" required> Yeah!</label>
-    <label><input type="radio" name="gap" value="No"> Nope</label>
-  </div>
-  <div id="gap-feedback"></div>
   
   <div class="question">
-    <p><h2>Can it be styled with 2+ pieces?</h2></p>
-    <label><input type="radio" name="styleable" value="Yes" required> Yeah! Versatile!</label>
-    <label><input type="radio" name="styleable" value="No"> Nope</label>
+    <h2>Patterns</h2>
+    <div id="pattern-feedback"></div>
+    <input type="radio" name="pattern" value="tartan" id="tartan" required>
+    <label for="tartan">Tartan</label>
+    <input type="radio" name="pattern" value="stripes" id="stripes">
+    <label for="stripes">Stripes</label>
+    <input type="radio" name="pattern" value="fair isle" id="fairisle">
+    <label for="fairisle">Fair Isle</label>
+    <input type="radio" name="pattern" value="sailboat" id="sailboat">
+    <label for="sailboat">Sailboat</label>
+    <input type="radio" name="pattern" value="houndstooth" id="houndstooth">
+    <label for="houndstooth">Houndstooth</label>
+    <input type="radio" name="pattern" value="cable knit" id="cableknit">
+    <label for="cableknit">Cable Knit</label>
   </div>
-  <div id="styleable-feedback"></div>
 
   <div class="question">
-    <p><h2>Is it trendy?</h2></p>
-    <label><input type="radio" name="trendy" value="Yes" required> Yeah!</label>
-    <label><input type="radio" name="trendy" value="No"> Nope</label>
+    <h2>Fabric</h2>
+    <div id="quality-feedback"></div>
+    <input type="radio" name="quality" value="cotton" id="cotton" required>
+    <label for="cotton">Cotton</label>
+    <input type="radio" name="quality" value="linen" id="linen-fabric">
+    <label for="linen-fabric">Linen</label>
+    <input type="radio" name="quality" value="wool" id="wool">
+    <label for="wool">Wool</label>
+    <input type="radio" name="quality" value="polyester" id="polyester">
+    <label for="polyester">Polyester</label>
   </div>
-  <div id="trendy-feedback"></div>
+
+  <div class="question">
+    <h2>Does it fill a wardrobe gap?</h2>
+    <div id="gap-feedback"></div>
+    <input type="radio" name="gap" value="Yes" id="gap-yes" required>
+    <label for="gap-yes">Yeah!</label>
+    <input type="radio" name="gap" value="No" id="gap-no">
+    <label for="gap-no">Nope</label>
+  </div>
+
+  <div class="question">
+    <h2>Can it be styled with 2+ pieces?</h2>
+    <div id="styleable-feedback"></div>
+    <input type="radio" name="styleable" value="Yes" id="styleable-yes" required>
+    <label for="styleable-yes">Yeah! Versatile!</label>
+    <input type="radio" name="styleable" value="No" id="styleable-no">
+    <label for="styleable-no">Nope</label>
+  </div>
+
+  <div class="question">
+    <h2>Is it trendy?</h2>
+    <div id="trendy-feedback"></div>
+    <input type="radio" name="trendy" value="Yes" id="trendy-yes" required>
+    <label for="trendy-yes">Yeah!</label>
+    <input type="radio" name="trendy" value="No" id="trendy-no">
+    <label for="trendy-no">Nope</label>
+  </div>
 
   <br />
   <button type="submit">Final Decision</button>
 </form>
+
 
 <hr />
 

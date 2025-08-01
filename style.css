@@ -28,18 +28,16 @@ label {
   margin-top: 0.7rem;
 }
 
-button {
-  font-size: 1rem;
-  font-family: 'Courier', monospace;
-  margin-top: 1.2rem;
-  padding: 0.5rem 1rem;
-  background: #50C878;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
+/*******************************/
+/* hide the radio input */
+/*******************************/
+
+.question input[type="radio"] {
+  display: none;
 }
 
 .question p {
+  font-family: 'Poppins', sans-serif;
   flex-basis: 100%;
   margin: 0 0 0.5em 0;
   font-weight: 600;
@@ -53,11 +51,35 @@ button {
   border-radius: 6px;
   border: 1px solid #ccc;
   cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
   transition: all 0.2s ease-in-out;
 }
 
 .question label:hover {
   background-color: #eaeaea;
+  transform: scale(1.03);
+}
+
+.question input[type="radio"]:checked + label {
+  background-color: #b3c7ff;
+  color: #1a1a40;
+  border: 2px solid #4a6cf7;
+  font-weight: 600;
+}
+
+/*******************************/
+/* Final Button */
+/*******************************/
+button {
+  font-size: 1rem;
+  font-family: 'Courier', monospace;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1rem;
+  background: #50C878;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #result {

@@ -76,54 +76,54 @@ function updateFeedback() {
 
   // Season feedback
   if (season && palettes[season]) {
-    document.getElementById("season-feedback").innerText = `Season chosen: ${season.charAt(0).toUpperCase() + season.slice(1)}`;
+    document.getElementById("season-feedback").innerText = `It's ${season.charAt(0).toUpperCase() + season.slice(1)}!`;
   }
 
   // Color feedback and scoring
   if (color && palettes[season] && palettes[season].colors.includes(color)) {
-    document.getElementById("color-feedback").innerText = `"${color}" is in your color palette for this season!`;
+    document.getElementById("color-feedback").innerText = `"${color}" works for the seasonal palette!`;
     updateScore(1);
   } else if (color) {
-    document.getElementById("color-feedback").innerText = `"${color}" isn't part of your seasonal palette.`;
+    document.getElementById("color-feedback").innerText = `UH OH! "${color}" isn't part of your seasonal palette.`;
   }
 
   // Pattern feedback and scoring
   if (pattern && palettes[season] && palettes[season].patterns.includes(pattern)) {
-    document.getElementById("pattern-feedback").innerText = `Pattern "${pattern}" fits the season!`;
+    document.getElementById("pattern-feedback").innerText = `"${pattern}" fits the season!`;
     updateScore(1);
   } else if (pattern) {
-    document.getElementById("pattern-feedback").innerText = `"${pattern}" isn't a known seasonal pattern.`;
+    document.getElementById("pattern-feedback").innerText = `UH OH! "${pattern}" isn't a known seasonal pattern.`;
   }
 
   // Quality feedback and scoring
   if (quality && !quality.includes("poly")) {
-    document.getElementById("quality-feedback").innerText = "Passes the fabric check!";
+    document.getElementById("quality-feedback").innerText = "Noice!";
     updateScore(1);
   } else if (quality) {
-    document.getElementById("quality-feedback").innerText = "Polyester? No thank you.";
+    document.getElementById("quality-feedback").innerText = "Polyester?!? Not worth it probably.";
   }
 
   // Gap feedback and scoring
   if (fillsGap) {
-    document.getElementById("gap-feedback").innerText = "This is a needed piece! Nice!";
+    document.getElementById("gap-feedback").innerText = "Score!!";
     updateScore(1);
   } else if (fillsGap === false) {
-    document.getElementById("gap-feedback").innerText = "Doesn't fill a wardrobe gap. Hmm.";
+    document.getElementById("gap-feedback").innerText = "Doesn't fill a wardrobe gap. Hmmmmm.";
   }
 
   // Styleable feedback and scoring
   if (styleable) {
-    document.getElementById("styleable-feedback").innerText = "We love versatility!";
+    document.getElementById("styleable-feedback").innerText = "Easeie Peasie!";
     updateScore(1);
   } else if (styleable === false) {
-    document.getElementById("styleable-feedback").innerText = "Hard to pair? That’s risky!";
+    document.getElementById("styleable-feedback").innerText = "Hard to pair? That’s risky.....";
   }
 
   // Final decision message
   if (liveScore >= 5) {
     document.getElementById("result").innerText = "YES! This is a smart pick.";
   } else {
-    document.getElementById("result").innerText = "Not quite a winner yet think it over.";
+    document.getElementById("result").innerText = "Sorry! Not quite a winner yet think it over.";
   }
 }
 

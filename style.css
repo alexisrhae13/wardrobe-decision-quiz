@@ -33,7 +33,7 @@ h2 {
 /* Question Label Styling */
 /*******************************/
 .question {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .question p {
@@ -46,10 +46,15 @@ h2 {
   display: none;
 }
 
+.question input[type="radio"]:focus + label {
+  outline: none;
+  box-shadow: none;
+}
+
 /* Cute label styles */
 .question label {
   border-radius: 50px;
-  padding: 12px 24px;
+  padding: 6px 14px;
   margin: 6px;
   background: #fdfcf8;
   color: #333;
@@ -74,7 +79,7 @@ h2 {
   color: #333;
   font-weight: 600;
   border-radius: 50px;
-  padding: 12px 24px;
+  padding: 6px 14px;
   transform: scale(1.04);
   overflow: hidden;
 }
@@ -98,9 +103,9 @@ h2 {
 
 /* Active bounce animation */
 @keyframes bounce {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.95); }
-  100% { transform: scale(1); }
+  0% { transform: scale(0.5); }
+  50% { transform: scale(0.15); }
+  100% { transform: scale(0.5); }
 }
 
 /* Bubble spin animation */
@@ -115,8 +120,8 @@ h2 {
   color: #333;
   font-weight: 600;
   border-radius: 50px;
-  padding: 12px 24px;
-  transform: scale(1.03);
+  padding: 6px 14px;
+  transform: scale(0.25);
   transition: all 0.2s ease-in-out;
   backdrop-filter: blur(1px);
   overflow: hidden;

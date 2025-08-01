@@ -29,8 +29,10 @@ h2 {
   font-weight: 600;
 }
 
-#pattern-feedback {
+.feedback {
   color: #36454f;
+  font-weight: 500;
+  margin-top: 6px;
 }
 
 /*******************************/

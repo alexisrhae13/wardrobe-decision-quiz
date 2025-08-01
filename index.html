@@ -11,7 +11,6 @@
 <form id="quiz-form">
   <div class="question">
     <h2>Season</h2>
-    <div id="season-feedback"></div>
     <input type="radio" name="season" value="fall" id="fall" required>
     <label for="fall">Fall🍂</label>
     <input type="radio" name="season" value="winter" id="winter">
@@ -20,11 +19,11 @@
     <label for="spring">Spring🌷</label>
     <input type="radio" name="season" value="summer" id="summer">
     <label for="summer">Summer☀️</label>
+    <div id="season-feedback" class="feedback"></div>></div>
   </div>
 
   <div class="question">
     <h2>Pick a color:</h2>
-    <div id="color-feedback"></div>
     <input type="radio" name="color" value="black" id="black">
     <label for="black"><span class="swatch" style="background-color:#000000;"></span> Black</label>
     <input type="radio" name="color" value="espresso brown" id="espresso-brown">
@@ -56,11 +55,10 @@
     <input type="radio" name="color" value="cobalt" id="cobalt">
     <label for="cobalt"><span class="swatch" style="background-color:#0047ab;"></span> Cobalt</label>
     <label for="electric-violet"><span class="swatch" style="background-color:#8f00ff;"></span> Electric Violet</label>
-  </div>
-
+    <div id="color-feedback" class="feedback"></div>></div></div>
   <div class="question">
+
   <h2>Patterns</h2>
-  <div id="pattern-feedback"></div>
     <input type="radio" name="pattern" value="none" id="none" required>
     <label for="none"><span class="swatch pattern none"></span> None</label>
     <input type="radio" name="pattern" value="abstract" id="abstract" required>
@@ -77,11 +75,11 @@
     <label for="houndstooth"><span class="swatch pattern houndstooth"></span> Houndstooth</label>
     <input type="radio" name="pattern" value="cable knit" id="cableknit">
     <label for="cableknit"><span class="swatch pattern cableknit"></span> Cable Knit</label>
+    <div id="pattern-feedback" class="feedback"></div>></div>
   </div>
 
   <div class="question">
     <h2>Fabric</h2>
-    <div id="quality-feedback"></div>
     <input type="radio" name="quality" value="cotton" id="cotton" required>
     <label for="cotton"><span class="swatch fabric cotton"></span> Cotton</label>
     <input type="radio" name="quality" value="linen" id="linen-fabric">
@@ -96,33 +94,34 @@
     <label for="velvet"><span class="swatch fabric velvet"></span> Velvet</label>
     <input type="radio" name="quality" value="cashmere" id="cashmere">
     <label for="cashmere"><span class="swatch fabric cashmere"></span> Cashmere</label>
+    <div id="quality-feedback" class="feedback"></div>></div>
   </div>
 
   <div class="question">
     <h2>Does it fill a wardrobe gap?</h2>
-    <div id="gap-feedback"></div>
     <input type="radio" name="gap" value="Yes" id="gap-yes" required>
     <label for="gap-yes">Yeah!</label>
     <input type="radio" name="gap" value="No" id="gap-no">
     <label for="gap-no">Nope</label>
+    <div id="gap-feedback" class="feedback"></div>></div>
   </div>
 
   <div class="question">
     <h2>Can it be styled with 2+ pieces?</h2>
-    <div id="styleable-feedback"></div>
     <input type="radio" name="styleable" value="Yes" id="styleable-yes" required>
     <label for="styleable-yes">Yeah! Versatile!</label>
     <input type="radio" name="styleable" value="No" id="styleable-no">
     <label for="styleable-no">Nope, not really</label>
+    <div id="styleable-feedback" class="feedback"></div>></div>
   </div>
 
   <div class="question">
     <h2>Is it trendy?</h2>
-    <div id="trendy-feedback"></div>
     <input type="radio" name="trendy" value="Yes" id="trendy-yes" required>
     <label for="trendy-yes">Yeah!</label>
     <input type="radio" name="trendy" value="No" id="trendy-no">
     <label for="trendy-no">Nope</label>
+    <div id="trendy-feedback"  class="feedback"></div>></div>
   </div>
 
   <br />

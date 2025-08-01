@@ -84,7 +84,6 @@ h2 {
   font-weight: 600;
   border-radius: 50px;
   padding: 6px 14px;
-  transform: scale(1.04);
   overflow: hidden;
 }
 
@@ -148,7 +147,7 @@ h2 {
       rgba(255, 255, 255, 0) 70%
     ),
     radial-gradient(circle at 30% 70%, 
-      rgba(0, 0, 0, 0.1) 0%, 
+      rgba(0, 255, 0, 0.04) 0%, 
       rgba(0, 0, 0, 0) 60%
     ),
     radial-gradient(circle at 40% 40%, 

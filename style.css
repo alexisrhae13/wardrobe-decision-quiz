@@ -1,70 +1,78 @@
+/* Import cute bubbly font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
 body {
   font-size: 1rem;
-  font-family: 'Courier', monospace;
+  font-family: 'Quicksand', sans-serif;
   padding: 0.5rem;
-  background: #fdfcf8;
+  background: #0047AB;
   color: #333;
   max-width: 600px;
   margin: auto;
+  text-align: center;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #b22222;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1rem;
-  font-family: 'Courier', monospace;
-  padding: 0.6rem;
+  font-size: 1.3rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.3rem; /* reduced bottom spacing */
   background: #fdfcf8;
   color: #50C878;
-  max-width: 600px;
   margin: auto;
-}
-
-label {
-  display: block;
-  margin-top: 0.7rem;
+  max-width: 600px;
+  font-weight: 600;
 }
 
 /*******************************/
-/* hide the radio input */
+/* Question Label Styling */
 /*******************************/
+.question {
+  margin-bottom: 1.2rem;
+}
 
+.question p {
+  font-weight: 600;
+  margin: 0 0 0.5em 0;
+}
+
+/* Hide radio buttons */
 .question input[type="radio"] {
   display: none;
 }
 
-.question p {
-  font-family: 'Poppins', sans-serif;
-  flex-basis: 100%;
-  margin: 0 0 0.5em 0;
-  font-weight: 600;
-}
+/* Cute label styles */
 .question label {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.25em;
-  padding: 0.4em 0.6em;
-  background-color: #f5f5f5;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  margin: 0.4em;
+  background-color: #fdfcf8; /* cream */
+  border-radius: 12px;
+  border: none;
   cursor: pointer;
   font-size: 0.95rem;
   color: #333;
+  font-weight: 500;
   transition: all 0.2s ease-in-out;
 }
 
 .question label:hover {
-  background-color: #eaeaea;
-  transform: scale(1.03);
+  background-color: #f3f3e8;
+  transform: scale(1.04);
 }
 
+/* When checked, apply gradient */
 .question input[type="radio"]:checked + label {
-  background-color: #b3c7ff;
-  color: #1a1a40;
-  border: 2px solid #4a6cf7;
+  background: linear-gradient(135deg, #fdfcf8 0%, #50C878 100%);
+  color: #fff;
   font-weight: 600;
 }
 
@@ -73,18 +81,25 @@ label {
 /*******************************/
 button {
   font-size: 1rem;
-  font-family: 'Courier', monospace;
+  font-family: 'Quicksand', sans-serif;
   margin-top: 1.2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   background: #50C878;
   border: none;
   font-weight: bold;
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #3fa46a;
 }
 
 #result {
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
+  color: #fffde7;
 }
-

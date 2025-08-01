@@ -68,7 +68,7 @@ function updateFeedback() {
   // Trend check - instant no
   if (trendy) {
     document.getElementById("trendy-feedback").innerText = "Will this age well?";
-    document.getElementById("result").innerText = "Watch out! Be cautious!";
+    document.getElementById("result").innerText = "NO - Trend";
     return; // Skip scoring others
   } else {
     document.getElementById("trendy-feedback").innerText = "Timeless?!";
@@ -121,9 +121,9 @@ function updateFeedback() {
 
   // Final decision message
   if (liveScore >= 5) {
-    document.getElementById("result").innerText = "YES! This is a smart pick.";
+    document.getElementById("result").innerText = "YES!";
   } else {
-    document.getElementById("result").innerText = "Sorry! Not quite a winner yet think it over.";
+    document.getElementById("result").innerText = "Nope :(";
   }
 }
 

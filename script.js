@@ -122,14 +122,21 @@ function updateFeedback() {
   // Final decision message
 const resultEl = document.getElementById("result");
 
-if (liveScore >= 5) {
-  resultEl.innerText = "✨ YES! Good find ✨";
-  resultEl.classList.remove("result-bad");
-  resultEl.classList.add("result-good");
-} else {
-  resultEl.innerText = "Nah. Not worth it";
-  resultEl.classList.remove("result-good");
-  resultEl.classList.add("result-bad");
+function updateResult() {
+  const resultEl = document.getElementById("result");
+
+  if (liveScore >= 5) {
+    resultEl.innerText = "✨ YES! Good find ✨";
+    resultEl.classList.remove("result-bad");
+    resultEl.classList.add("result-good");
+  } else {
+    resultEl.innerText = "Nah. Not worth it";
+    resultEl.classList.remove("result-good");
+    resultEl.classList.add("result-bad");
+  }
+
+  // Also update the live score number
+  document.getElementById("live-score").innerText = liveScore;
 }
 
 // Initialize listeners when DOM ready

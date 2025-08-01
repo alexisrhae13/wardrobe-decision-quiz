@@ -288,10 +288,23 @@ button:hover {
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #c4002f;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.bottom-dock {
+/* Glowing green for good finds */
+.result-good {
+  color: #50C878;
+  text-shadow: 0 0 8px #50C878, 0 0 14px #50C878aa;
+}
+
+/* Glowing red for bad buys */
+.result-bad {
+  color: #c4002f;
+  text-shadow: 0 0 8px #c4002f, 0 0 14px #ff0033aa;
+}
+
+.bottom-dock { 
   position: fixed;
   bottom: 0;
   left: 0;
@@ -302,9 +315,12 @@ button:hover {
   padding: 10px 20px;
   font-size: 1.1rem;
   display: flex;
+  flex-wrap: wrap; /* 👈 allows wrapping */
   justify-content: space-between;
   align-items: center;
   z-index: 999;
   box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box; 
 }
+
 

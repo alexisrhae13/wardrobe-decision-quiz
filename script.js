@@ -120,11 +120,16 @@ function updateFeedback() {
   }
 
   // Final decision message
-  if (liveScore >= 5) {
-    document.getElementById("result").innerText = "YES!";
-  } else {
-    document.getElementById("result").innerText = "Nope :(";
-  }
+const resultEl = document.getElementById("result");
+
+if (liveScore >= 5) {
+  resultEl.innerText = "✨ YES! Good find ✨";
+  resultEl.classList.remove("result-bad");
+  resultEl.classList.add("result-good");
+} else {
+  resultEl.innerText = "Nah. Not worth it";
+  resultEl.classList.remove("result-good");
+  resultEl.classList.add("result-bad");
 }
 
 // Initialize listeners when DOM ready

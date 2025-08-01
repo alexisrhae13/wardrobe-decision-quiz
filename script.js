@@ -32,19 +32,19 @@ function updateScore(value) {
 const palettes = {
   fall: {
     colors: ["crisp cream", "espresso brown", "charcoal gray", "navy", "chartreuse", "cherry red", "bright teal", "electric violet", "emerald green"],
-    patterns: ["tartan", "fair isle", "houndstooth", "cable knit"]
+    patterns: ["none", "tartan", "fair isle", "houndstooth", "cable knit"]
   },
   winter: {
     colors: ["crisp cream", "espresso brown", "charcoal gray", "navy", "chartreuse", "cherry red", "bright teal", "electric violet", "emerald green"],
-    patterns: ["tartan", "fair isle", "houndstooth", "cable knit"]
+    patterns: ["none", "tartan", "fair isle", "houndstooth", "cable knit"]
   },
   spring: {
     colors: ["black", "light gray", "linen beige", "cobalt", "chartreuse", "hot magenta", "cherry red", "turquoise"],
-    patterns: ["stripes", "sailboat"]
+    patterns: ["none", "abstract", "stripes", "sailboat"]
   },
   summer: {
     colors: ["black", "light gray", "linen beige", "cobalt", "chartreuse", "hot magenta", "cherry red", "turquoise"],
-    patterns: ["stripes", "sailboat"]
+    patterns: ["none", "abstract", "stripes", "sailboat"]
   }
 };
 

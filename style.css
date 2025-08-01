@@ -294,7 +294,7 @@ h2 {
   background-color: #fdfcf8;
 }
 
-.pattern.sailboat {
+.pattern.sailboat2 {
   background: url("data:image/svg+xml;utf8,
     <svg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'>
       <!-- Sail (white triangle) -->
@@ -303,6 +303,12 @@ h2 {
       <!-- Hull (navy semicircle) -->
       <path d='M12 44 A20 12 0 0 0 52 44 Z' fill='%23002f6c'/>
     </svg>") no-repeat center;
+  background-size: 24px 24px;
+  background-color: #fdfcf8;
+}
+
+.pattern.sailboat {
+  background: url("data:image/svg+xml;utf8,%3Csvg%20viewBox='0%200%2064%2064'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon%20points='32,8%2032,40%208,40'%20fill='white'/%3E%3Cpath%20d='M12%2044%20A20%2012%200%200%200%2052%2044%20Z'%20fill='%23002f6c'/%3E%3C/svg%3E") no-repeat center;
   background-size: 24px 24px;
   background-color: #fdfcf8;
 }

@@ -271,7 +271,7 @@ h2 {
 }
 
 .pattern.fairisle {
-  --s: 6px; /* control the size*/
+  --s: 4px; /* control the size*/
   --c1: #7f8c8d;
   --c2: #bdc3c7;
   
@@ -309,7 +309,7 @@ h2 {
 
 .pattern.sailboat {
   background: url("data:image/svg+xml;utf8,%3Csvg%20viewBox='0%200%2064%2064'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon%20points='32,8%2032,40%208,40'%20fill='white'/%3E%3Cpath%20d='M12%2044%20A20%2012%200%200%200%2052%2044%20Z'%20fill='%23002f6c'/%3E%3C/svg%3E") no-repeat center;
-  background-size: 24px 24px;
+  background-size: 4px 4px;
   background-color: #fdfcf8;
 }
 
@@ -323,7 +323,7 @@ h2 {
 }
 
 .pattern.houndstooth {
-  --s: 28px; /* control the size*/
+  --s: 8px; /* control the size*/
   --c1: #5b7c8d;
   --c2: #edf6ee;
     
@@ -343,7 +343,7 @@ h2 {
 }
 
 .pattern.cableknit{
-  --s: 30px; /* control the size*/
+  --s: 8px; /* control the size*/
   --c1: #a2d07c;
   --c2: #d5f4cd;
   

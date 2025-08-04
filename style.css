@@ -276,7 +276,7 @@ h2 {
 }
 
 .pattern.fairisle {
-  --s: 4px; /* control the size*/
+  --s: 2px;
   --c1: #7f8c8d;
   --c2: #bdc3c7;
   

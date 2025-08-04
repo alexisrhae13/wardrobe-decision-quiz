@@ -199,7 +199,6 @@ h2 {
   border: 1.5px solid #ccc;
 }
 
-/* Pattern swatches */
 .pattern.none {
   background: #fdfcf8;
 }
@@ -230,6 +229,12 @@ h2 {
     var(--g4) calc(3*var(--s)) 0,
     repeating-linear-gradient(var(--c1) 0 25%,var(--c2) 0 50%);
   background-size: calc(4*var(--s)) calc(12*var(--s));
+  margin: 0;
+  min-height: 80%;
+  min-width: 90%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
 }
 
 .pattern.tartan1 {
@@ -286,6 +291,12 @@ h2 {
     radial-gradient(30% 30% at 30% 0%  ,var(--g))
      var(--c2);
   background-size: calc(20*var(--s)) calc(20*var(--s));
+  margin: 0;
+  min-height: 80%;
+  min-width: 90%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
 }
 
 .pattern.sailboat1 {
@@ -343,7 +354,7 @@ h2 {
 }
 
 .pattern.cableknit{
-  --s: 8px; /* control the size*/
+  --s: 8px;
   --c1: #a2d07c;
   --c2: #d5f4cd;
   
